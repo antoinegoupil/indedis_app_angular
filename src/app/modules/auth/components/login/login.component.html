@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="d-flex justify-content-center login-body">
+  <div class="card mb-3 w-25">
+    <div class="card-body">
+      <h5 class="card-title">Connexion</h5>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+      </form>
+    </div>
+  </div>
+</div>
