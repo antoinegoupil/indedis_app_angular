@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { TokenDto } from 'src/app/core/models/token.dto';
+import { TokenDto } from 'src/app/shared/dto/token.dto';
 import { environment } from 'src/environments/environment';
 import { AuthProcessingService } from 'src/app/core/services/auth-processing.service';
 import { LoginDto } from '../dto/login.dto';
