@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InitProcessingService } from './core/services/init-processing.service';
 import { HttpReqInterceptor } from './core/interceptors/http-req.interceptor';
+import { NavBarComponent } from './core/components/nav-bar/nav-bar.component';
 
 export function initData(initProcessingService: InitProcessingService) {
   return () => initProcessingService.setData();
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavBarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     {
