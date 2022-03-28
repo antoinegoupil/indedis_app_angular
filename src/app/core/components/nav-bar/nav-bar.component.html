@@ -41,8 +41,15 @@
           <i class="bi bi-person icon-size"></i>
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" routerLink="/auth/login">Connexion</a></li>
-          <li><a class="dropdown-item">Inscription</a></li>
+          <ng-container *ngIf="!isAuth">
+            <li><a class="dropdown-item" routerLink="/auth/login">Connexion</a></li>
+            <li><a class="dropdown-item" routerLink="/auth/register">Inscription</a></li>
+          </ng-container>
+
+          <ng-container *ngIf="isAuth">
+            <li><a class="dropdown-item btn" (click)="logout()">Déconnexion</a></li>
+          </ng-container>
+          
           <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
           <li><hr class="dropdown-divider"></li>

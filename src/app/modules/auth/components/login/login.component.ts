@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginDto } from '../../dto/login.dto';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -13,21 +15,34 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuider: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
+    private toastr: ToastrService
   ) {
-    this.loginForm = this.formBuider.group({
-      email: [null, Validators.required],
-      password: [null, Validators.required],
-    });
+    this.loginForm = this.initForm();
   }
 
   ngOnInit(): void {}
 
+  initForm(): FormGroup {
+    return this.formBuider.group({
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, Validators.required],
+    });
+  }
+
   onSubmit() {
-    this.authService
-      .login(this.loginForm.value as LoginDto)
-      .subscribe((value) => {
-        console.log(value);
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value as LoginDto).subscribe({
+        next: (value) => {
+          this.toastr.success('Bonjour !');
+          this.router.navigate(['']);
+        },
+        error: (err) =>
+          this.toastr.error('Identifiant ou mot de passe incorrect !'),
       });
+    } else {
+      this.toastr.error('Champs incorrect');
+    }
   }
 }

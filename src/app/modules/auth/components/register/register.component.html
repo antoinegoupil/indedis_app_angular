@@ -1,1 +1,35 @@
-<p>register works!</p>
+<div class="d-flex justify-content-center register-body">
+  <div class="card mb-3 w-25">
+    <div class="card-body">
+      <h5 class="card-title">Connexion</h5>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+
+        <div class="mb-3">
+          <label for="firstname" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="firstname" formControlName="firstname">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+
+        <div class="mb-3">
+          <label for="passwordConf" class="form-label">Confirmation Mot de passe</label>
+          <input type="password" class="form-control" id="passwordConf" formControlName="passwordConf">
+        </div>
+
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+</div>
