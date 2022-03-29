@@ -11,12 +11,16 @@ import { ProductFilterDto } from '../dto/product-filter.dto';
 export class CommerceService {
   constructor(private httpClient: HttpClient) {}
 
-  getProduct(filter: ProductFilterDto): Observable<Product[]> {
+  getProducts(filter: ProductFilterDto): Observable<Product[]> {
     const params = new HttpParams({
       fromObject: { ...filter },
     });
     return this.httpClient.get<Product[]>(environment.apiUrl + '/products', {
       params,
     });
+  }
+
+  getProduct(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(environment.apiUrl + '/products/' + id);
   }
 }

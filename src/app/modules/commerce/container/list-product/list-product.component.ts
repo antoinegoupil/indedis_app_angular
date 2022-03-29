@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/core/models/product.model';
 import { environment } from 'src/environments/environment';
 import { ProductFilterDto } from '../../dto/product-filter.dto';
@@ -12,7 +12,6 @@ import { CommerceService } from '../../services/commerce.service';
 })
 export class ListProductComponent implements OnInit {
   products: Product[] = [];
-  imgageBasePath = environment.apiUrl + '/public/';
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +29,7 @@ export class ListProductComponent implements OnInit {
   }
 
   getData(filter: ProductFilterDto) {
-    this.commerceService.getProduct(filter).subscribe((data: Product[]) => {
+    this.commerceService.getProducts(filter).subscribe((data: Product[]) => {
       this.products = data;
     });
   }

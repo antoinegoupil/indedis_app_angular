@@ -1,0 +1,12 @@
+<div class="card card-pointer" (click)="detailProduct(product.id)">
+  <div class="card-header text-truncate">
+    {{ product.name }}
+  </div>
+  <img [src]="imgageBasePath + product.imageName" height="200" style="object-fit: contain;" class="card-img-top" alt="...">
+  <div class="card-body">
+    {{ product.description }}
+  </div>
+  <div class="card-footer d-flex justify-content-end">
+    {{ product.price }} €
+  </div>
+</div>

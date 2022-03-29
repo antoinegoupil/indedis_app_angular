@@ -1,0 +1,11 @@
+<app-filter-bar></app-filter-bar>
+
+<!-- <p>list-product works!</p> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 mb-3">
+      <app-card-list-product [product]="product"></app-card-list-product>
+    </div>
+  </div>
+</div>
