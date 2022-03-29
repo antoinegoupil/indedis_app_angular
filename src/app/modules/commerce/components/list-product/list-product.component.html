@@ -1,1 +1,22 @@
-<p>list-product works!</p>
+<app-filter-bar></app-filter-bar>
+
+<!-- <p>list-product works!</p> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 mb-3">
+      <div class="card">
+        <div class="card-header text-truncate">
+          {{ product.name }}
+        </div>
+        <img [src]="imgageBasePath + product.imageName" height="200" style="object-fit: contain;" class="card-img-top" alt="...">
+        <div class="card-body">
+          {{ product.description }}
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+          {{ product.price }} €
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

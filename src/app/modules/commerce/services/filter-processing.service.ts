@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ProductFilterDto } from '../dto/product-filter.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -24,5 +25,19 @@ export class FilterProcessingService {
 
   setMark(value: number | null) {
     this._mark.next(value);
+  }
+
+  getAll(): ProductFilterDto {
+    const filter: ProductFilterDto = {};
+
+    if (this._name.value !== null) {
+      filter.name = this._name.value;
+    }
+
+    if (this._mark.value !== null) {
+      filter.mark = this._mark.value;
+    }
+
+    return filter;
   }
 }

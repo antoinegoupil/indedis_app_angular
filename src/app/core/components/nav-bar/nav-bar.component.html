@@ -6,8 +6,8 @@
 
     <form class="d-flex">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="btn-search">
-        <button class="btn btn-outline-secondary" type="button" id="btn-search"><i class="bi bi-search"></i></button>
+        <input type="text" class="form-control" placeholder="Recherche" (keydown)="bugFix($event)" (keyup)="changeName($event)" aria-label="Recherche" aria-describedby="btn-search">
+        <button class="btn btn-outline-secondary" type="button" id="btn-search" (click)="search()"><i class="bi bi-search"></i></button>
       </div>
     </form>
 
@@ -28,6 +28,8 @@
           </ng-container>
 
           <ng-container *ngIf="isAuth">
+            <li><a class="dropdown-item">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item btn" (click)="logout()">Déconnexion</a></li>
           </ng-container>
           

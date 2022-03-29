@@ -1,9 +1,10 @@
-<nav class="navbar navbar-light bg-light">
-  <select class="form-select" aria-label="Select mark" (change)="selectMark($event)" style="max-width: 200px;">
+<nav class="navbar navbar-light bg-light container-fluid">
+  <div class="row">
+  <!-- <div class=""> -->
+  <select class="form-select col-12" aria-label="Select mark" (change)="selectMark($event)">
     <option [value]="null" selected>Marques</option>
     <option *ngFor="let mark of marks" [value]="mark.id">{{ mark.name }}</option>
-    <!-- <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option> -->
   </select>
+  <!-- </div> -->
+</div>
 </nav>

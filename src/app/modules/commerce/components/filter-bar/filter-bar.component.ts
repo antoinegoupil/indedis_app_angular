@@ -22,7 +22,5 @@ export class FilterBarComponent implements OnInit {
   selectMark(event: Event) {
     const target = event.target as HTMLSelectElement;
     this.filterProcessingService.setMark(+target.value ? +target.value : null);
-    // console.log(idMark);
-    // console.log(idMark.target?.value);
   }
 }
