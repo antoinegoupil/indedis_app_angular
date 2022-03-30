@@ -7,6 +7,7 @@ import { CommerceRoutingModule } from './commerce-routing.module';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { CardListProductComponent } from './components/card-list-product/card-list-product.component';
 import { BasketComponent } from './container/basket/basket.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { BasketComponent } from './container/basket/basket.component';
     CardListProductComponent,
     BasketComponent,
   ],
-  imports: [CommonModule, CommerceRoutingModule],
+  imports: [CommonModule, CommerceRoutingModule, FormsModule],
 })
 export class CommerceModule {}

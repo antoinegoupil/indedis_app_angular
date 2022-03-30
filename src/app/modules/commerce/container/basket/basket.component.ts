@@ -19,29 +19,29 @@ export class BasketComponent implements OnInit, OnDestroy {
   constructor(private basketService: BasketService) {}
 
   ngOnInit(): void {
-    // this.getData();
-    this.products = [
-      {
-        product: {
-          id: 68,
-          name: 'Caramels surprenants : Coffret',
-          description: 'Une saveur surprenante',
-          price: 3.8,
-          imageName: 'coffret_surprenant.png',
-        },
-        amount: 2,
-      },
-      {
-        product: {
-          id: 69,
-          name: "La gourmandise du pain d'épices : Coffret",
-          description: 'Pour les gros gourmands',
-          price: 3.8,
-          imageName: 'coffret_pain_depice.png',
-        },
-        amount: 1,
-      },
-    ];
+    this.getData();
+    // this.products = [
+    //   {
+    //     product: {
+    //       id: 68,
+    //       name: 'Caramels surprenants : Coffret',
+    //       description: 'Une saveur surprenante',
+    //       price: 3.8,
+    //       imageName: 'coffret_surprenant.png',
+    //     },
+    //     amount: 2,
+    //   },
+    //   {
+    //     product: {
+    //       id: 69,
+    //       name: "La gourmandise du pain d'épices : Coffret",
+    //       description: 'Pour les gros gourmands',
+    //       price: 3.8,
+    //       imageName: 'coffret_pain_depice.png',
+    //     },
+    //     amount: 1,
+    //   },
+    // ];
     this.totalPrice = this.getTotalPrice(this.products);
   }
 

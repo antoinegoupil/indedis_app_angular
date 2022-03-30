@@ -33,7 +33,7 @@
 
   <ng-container *ngFor="let product of products; let index = index; let last = last;">
  <!-- {{ products.length %2 }} -->
-  <div *ngIf="index %2 === 0" class="row featurette">
+  <div *ngIf="index %2 === 0" class="row featurette cursor-pointer" [routerLink]="['products', product.id]">
     <div class="col-md-7">
       <!-- <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2> -->
       <h2 class="featurette-heading">{{ product.name }}</h2>
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div *ngIf="index %2 !== 0" class="row featurette">
+  <div *ngIf="index %2 !== 0" class="row featurette cursor-pointer" [routerLink]="['products', product.id]">
     <div class="col-md-7 order-md-2">
       <!-- <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2> -->
       <h2 class="featurette-heading">{{ product.name }}</h2>

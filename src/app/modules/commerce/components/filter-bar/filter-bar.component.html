@@ -1,8 +1,8 @@
 <nav class="navbar navbar-light bg-light container-fluid">
-  <div class="row">
-  <select class="form-select col-12" aria-label="Select mark" (change)="selectMark($event)">
-    <option [value]="null" selected>Marques</option>
-    <option *ngFor="let mark of marks" [value]="mark.id">{{ mark.name }}</option>
-  </select>
-</div>
+  <div class="col-12 col-sm-3 col-md-2 col-xxl-1">
+    <select class="form-select " aria-label="Select mark" (change)="selectMark($event)">
+      <option [value]="null" selected>Marques</option>
+      <option *ngFor="let mark of marks" [value]="mark.id">{{ mark.name }}</option>
+    </select>
+  </div>
 </nav>
