@@ -6,6 +6,7 @@ import { ProductComponent } from './container/product/product.component';
 import { CommerceRoutingModule } from './commerce-routing.module';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { CardListProductComponent } from './components/card-list-product/card-list-product.component';
+import { BasketComponent } from './container/basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CardListProductComponent } from './components/card-list-product/card-li
     ProductComponent,
     FilterBarComponent,
     CardListProductComponent,
+    BasketComponent,
   ],
   imports: [CommonModule, CommerceRoutingModule],
 })
