@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Prérequis
 
-Nodejs 16
-Angular cli ```npm install -g @angular/cli```
+* Nodejs 16
+* Angular cli ```npm install -g @angular/cli```
 
 ## Installation
 
