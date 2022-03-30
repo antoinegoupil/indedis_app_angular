@@ -1,27 +1,18 @@
-# IndedisAppAngular
+Lancer le projet : 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Run `npm install` pour installer toutes les dépendances,
 
-## Development server
+Run `ng serve`pour lancer le serveur,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+En simulatané il faut lancer le serveur du backend et connecté la base de données à une base de données local,
 
-## Code scaffolding
+Pour le backend il faut clone l'autre Github,
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm install` pour installer toutes les dépendances,
 
-## Build
+Run `npm run start`pour lancer le serveur,
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Créer la BDD en local avec pour nom indenis,
+Puis éxecuter les scripts SQL,
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Enfin après le front, le back de lancer et la BDD de connecté le serveur devrais fonctionner correctement
