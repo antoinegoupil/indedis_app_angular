@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { ProductFilterDto } from '../../dto/product-filter.dto';
 import { CommerceService } from '../../services/commerce.service';
 
+
 @Component({
   selector: 'app-list-product',
   templateUrl: './list-product.component.html',
@@ -12,6 +13,8 @@ import { CommerceService } from '../../services/commerce.service';
 })
 export class ListProductComponent implements OnInit {
   products: Product[] = [];
+
+
 
   constructor(
     private route: ActivatedRoute,

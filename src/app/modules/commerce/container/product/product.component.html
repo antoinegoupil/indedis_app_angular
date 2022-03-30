@@ -1,2 +1,43 @@
-<p>product works!</p>
-{{ product.name }}
+<div class="container">
+    <div id="divTop">
+        <div id="imgDiv">
+            <img [src]="imgageBasePath + product.imageName">
+        </div>
+        <div id="divRight">
+            <div id="titleDiv">
+                <h1>{{ product.name }}</h1>
+            </div>
+            <div id="descDiv">
+                <h3>Description : {{ product.description }}</h3>
+            </div>
+            <div id="priceDiv">
+                <h3>Prix : {{ product.price }} €  
+                    <input type="number" class="number" name="" min="0" max="50">
+                    <input class="button" type="button" value="Ajouter au panier" onclick="myFunction()"> 
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="divDown">
+        <div id="divIngredients">
+            <p>Ingredients</p>
+        </div>
+        <div id="divAllergens">
+            <p>Allergens</p>
+        </div>
+    </div>
+</div>
+
+
+<!---
+      id: number;
+  name: string;
+  description: string;
+  price: number;
+  imageName: string;
+  mark: Mark;
+  ingredients: Ingredient[];
+  allergens: Allergen[];
+  commandsProduct: CommandProduct[];
+   ---->

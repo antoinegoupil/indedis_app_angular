@@ -1,0 +1,110 @@
+.container{
+    display: block;
+}
+
+#imgDiv{
+	display:flex;
+	float:left;
+	border-style: solid;
+	//border-color: grey;
+    border-color: black;
+    border-width: 1px;
+	width:49%;
+	height:49%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+#titleDiv{  
+    text-decoration: underline;
+    display:block;
+    //border-style: solid;
+	//border-color: red;
+    margin-top: 50px;
+}
+
+#descDiv{
+    display:block;
+    //border-style: solid;
+	//border-color: blue;
+    margin-top: 50px;
+}
+
+#priceDiv{
+    display:block;
+    //border-style: solid;
+	//border-color: yellow;
+    margin-top: 50px;
+}
+
+#divDown{
+    position:relative;
+    margin-top: 15%;
+    display:flex;
+    //border-style: solid;
+	//border-color: cyan;
+    width:160%;
+    right: 30%;
+}
+
+#divTop{
+    position:relative;
+    margin-top: 15%;
+    display:flex;
+    //border-style: solid;
+	//border-color: rgb(255, 208, 0);
+    
+    width:160%;
+    right: 30%;
+}
+
+#divRight{
+    margin-left: 5%;
+    padding-left: 3%;
+    padding-top: 5%;
+    position: relative;
+
+    display:block;
+    border-width: 1px;
+    border-style: solid;
+	//border-color: purple;
+    //border-color: black;
+    width:70%;
+
+}
+
+#divIngredients{
+    display:block;
+    border-style: solid;
+	//border-color: rgb(255, 0, 212);
+    border-color: black;
+    height: 100%;
+    width: 50%;
+    border-width: 1px;
+}
+
+#divAllergens{
+    display:block;
+    border-style:solid;
+	//border-color: rgb(0, 255, 106);
+    border-color: black;
+    height: 100%;
+    width: 50%;
+    border-width: 1px;
+    border-left: none;
+}
+
+.button {
+    margin-left: 10%;
+    margin-top: 1%;
+    background-color: #FAEEDE;
+    color: #5C5752;
+    border-radius: 10px;
+}
+
+.number {
+    margin-left: 10%;
+}
