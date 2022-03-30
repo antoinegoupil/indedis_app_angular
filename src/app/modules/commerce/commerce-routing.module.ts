@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BasketComponent } from './container/basket/basket.component';
 import { HomeComponent } from './container/home/home.component';
 import { ListProductComponent } from './container/list-product/list-product.component';
 import { ProductComponent } from './container/product/product.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
     path: 'products/:id',
     component: ProductComponent,
     resolve: { product: ProductResolver },
+  },
+  {
+    path: 'basket',
+    component: BasketComponent,
   },
 ];
 

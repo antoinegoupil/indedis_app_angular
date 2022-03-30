@@ -1,3 +1,60 @@
 <app-filter-bar></app-filter-bar>
 
-<p>home works!</p>
+<!-- <p>home works!</p> -->
+
+<div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://localhost:3000/public/stand1.jpg" class="d-block w-100 img-cover">
+    </div>
+    <div class="carousel-item">
+      <img src="http://localhost:3000/public/stand2.png" class="d-block w-100 img-cover">
+    </div>
+    <!-- <div class="carousel-item">
+      <img src="http://localhost:3000/public/sachet_miel.jpg" class="d-block w-100 img-cover">
+    </div> -->
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container">
+
+  <ng-container *ngFor="let product of products; let index = index; let last = last;">
+ <!-- {{ products.length %2 }} -->
+  <div *ngIf="index %2 === 0" class="row featurette">
+    <div class="col-md-7">
+      <!-- <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2> -->
+      <h2 class="featurette-heading">{{ product.name }}</h2>
+      <p class="lead">{{ product.description }}</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto" [src]="imgageBasePath + product.imageName" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <div *ngIf="index %2 !== 0" class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <!-- <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2> -->
+      <h2 class="featurette-heading">{{ product.name }}</h2>
+      <p class="lead">{{ product.description }}</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img class="featurette-image img-fluid mx-auto" [src]="imgageBasePath + product.imageName" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr *ngIf="!last" class="featurette-divider">
+  </ng-container>
+</div>

@@ -8,9 +8,10 @@ export interface Product {
   name: string;
   description: string;
   price: number;
+  isHome?: boolean;
   imageName: string;
-  mark: Mark;
-  ingredients: Ingredient[];
-  allergens: Allergen[];
-  commandsProduct: CommandProduct[];
+  mark?: Mark;
+  ingredients?: Ingredient[];
+  allergens?: Allergen[];
+  commandsProduct?: CommandProduct[];
 }
